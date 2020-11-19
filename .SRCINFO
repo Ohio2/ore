@@ -1,0 +1,10 @@
+pkgbase = ore
+	pkgdesc = (O)hio2's AU(R) helper & pacman wrapp(e)r
+	pkgver = 1
+	pkgrel = 0
+	url = https://github.com/Ohio2/ore
+	license = GPLv3
+	md5sums = nocheck
+
+pkgname = ore
+
