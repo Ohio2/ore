@@ -1,0 +1,12 @@
+# (O)hio2's (A)UR helper & pacman wrapp(e)r
+How to use this?
+Most of the syntax is from PACMAN(8)
+Install packages (both AUR and Official)
+  ore -S <package name>
+Version
+  ore -V
+Help (not pacman help!)
+  ore -H 
+Other* eg. -Qs
+  ore -Qs <package name>
+! This assumes you know PACMAN(8) syntax !
