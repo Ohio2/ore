@@ -4,7 +4,8 @@ ore_ver=0.0.1
 case $1 in 
   -S) sudo pacman -S $2 2>/dev/null || git clone "https://aur.archlinux.org/$2.git" $ore_dir/$2 && cd $ore_dir/$2 && makepkg -sci 2>/dev/null && cd - && rm -rf $2 2>/dev/null && cd - 2>/dev/null || echo -e '\e[31m:: \e[39mPackage not found/PKGBUILD not found' ;;
   -R) sudo pacman -R $2 2>/dev/null || echo -e '\e[31m:: \e[39mPackage not found' ;; 
-  -V) echo -e "\e[34m:: \e[39mOhio2's handy dandy AUR helper & pacman wrapper!" ;;
-  -U) sudo pacman -U $2 2>/dev/null || echo -e '\e[31m:: \e[39mFile not found.' ;;
-  $1) pacman $1 2>/dev/null || sudo pacman $1 2>/dev/null || echo -e '\e[31m:: \e[39mCommand not found' ;;
+  -H) echo -e "\e[34m:: \e[39mOhio2's handy dandy AUR helper & pacman wrapper!" ;;
+  -V) echo -e "\e[34m:: \e[39m1-0"
+  -U) sudo pacman -U $2 2>/dev/null || echo -e '\e[31m:: \e[39mFile not found.' ;;  
+   $1) pacman $1 2>/dev/null || sudo pacman $1 2>/dev/null || echo -e '\e[31m:: \e[39mCommand not found' ;;
 esac
