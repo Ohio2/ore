@@ -2,7 +2,7 @@
 ore_dir=$HOME/.ore
 ore_ver="1-0"
 case $1 in 
-  -S) sudo pacman -S $2 2>/dev/null || git clone "https://aur.archlinux.org/$2.git" $ore_dir/$2 && cd $ore_dir/$2 && makepkg -si 2>/dev/null && cd - && rm -rf $2 2>/dev/null && cd - 2>/dev/null || echo -e '\e[31m:: \e[39mPackage not found/PKGBUILD not found' ;;
+  -S) sudo pacman -S $2 2>/dev/null || git clone "https://aur.archlinux.org/$2.git" $ore_dir/$2 && cd $ore_dir/$2 && echo -e "\e[34m:: \e[39mFetching the Package from AUR" && makepkg -si 2>/dev/null && cd - && rm -rf $2 2>/dev/null && cd - 2>/dev/null || echo -e '\e[31m:: \e[39mPackage not found/PKGBUILD not found' ;;
   -R) sudo pacman -R $2 2>/dev/null || echo -e '\e[31m:: \e[39mPackage not found' ;; 
   -H) echo -e "\e[34m:: \e[39mOhio2's handy dandy AUR helper & pacman wrapper!" ;;
   -V) echo -e "\e[34m:: \e[39m${ore_ver}" ;; 
