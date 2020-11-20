@@ -14,6 +14,7 @@ prepare(){
  cd ore
 }
 package() {
-	install -Dm 775 $srcdir/ore/ore $pkgdir/usr/bin/ore
-  install -Dm 644 $srcdir/ore/doc $pkgdir/usr/local/man/man1/ore
+	install -Dm775 "$srcdir"/ore/ore "$pkgdir"/usr/bin/ore
+  install -Dm644 "$srcdir"/ore/doc "$pkgdir"/usr/local/man/man1/ore.1
+  gzip" $pkgdir"/usr/local/man/man1/ore.1 
 }
